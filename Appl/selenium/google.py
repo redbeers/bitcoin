@@ -9,7 +9,11 @@ elem = driver.find_element_by_name("q")
 elem.send_keys("공룡상")
 elem.send_keys(Keys.RETURN)
 
+<<<<<<< Updated upstream
 SCROLL_PAUSE_TIME = 1.0
+=======
+SCROLL_PAUSE_TIME = 1.5
+>>>>>>> Stashed changes
 
 # Get scroll height
 last_height = driver.execute_script("return document.body.scrollHeight")
@@ -25,11 +29,16 @@ while True:
     new_height = driver.execute_script("return document.body.scrollHeight")
     if new_height == last_height:
         try:
+<<<<<<< Updated upstream
             driver.find_element_by_css_selector(".mye4qd").click()
+=======
+       driver.find_element_by_css_selector(".mye4qd").click()
+>>>>>>> Stashed changes
         except:
             break
     last_height = new_height
 
+<<<<<<< Updated upstream
 images = driver.find_elements_by_css_selector(".rg_i.Q4LuWd")
 count = 1
 
@@ -46,3 +55,21 @@ for image in images:
         pass
 
 driver.close()
+=======
+# images = driver.find_elements_by_css_selector(".rg_i.Q4LuWd")
+# count = 1
+# for image in images:
+#     image.click()
+#     time.sleep(3)
+#     imgURL = driver.find_element_by_css_selector(".n3VNCb").get_attribute("src")
+#     urllib.request.urlretrieve(imgURL, str(count)+".jpg")
+#     count = count + 1
+
+# assert "Python" in driver.title
+# elem = driver.find_element_by_name("q")
+# elem.clear()
+# elem.send_keys("pycon")
+# elem.send_keys(Keys.RETURN)
+# assert "No results found." not in driver.page_source
+# driver.close()
+>>>>>>> Stashed changes
