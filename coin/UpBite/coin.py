@@ -44,7 +44,7 @@ def buy():
     query = {
     'market': 'KRW-BTT',
     'side': 'bid',
-    'volume': '640',
+    'volume': '1200',
     'price': now_price,
     'ord_type': 'limit',
     }
